@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Header from './components/Header'
 import SectionOne from './components/SectionOne'
 import SectionTwo from './components/SectionTwo'
+import Switch from './components/Switch'
 
 import './App.css';
 
