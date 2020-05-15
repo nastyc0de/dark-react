@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Card = ({username, icon, followers, suscriber}) => {
+const Card = ({username, icon, followers, suscriber, socialNetwork}) => {
+    const cardClass = `card card-${socialNetwork}`;
     return (
-        <article className="card card-facebook">
+        <article className={cardClass}>
                     <p className="card-title">
                         <img src={icon} alt=""/>
                         {username}

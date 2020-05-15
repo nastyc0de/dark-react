@@ -1,5 +1,64 @@
 import React from 'react';
+import OverviewCard from './OverviewCard'
 
+const ListDataInfo =[
+    {
+        id:1,
+        icon:"images/icon-facebook.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:2,
+        icon:"images/icon-facebook.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:3,
+        icon:"images/icon-twitter.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:4,
+        icon:"images/icon-twitter.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:5,
+        icon:"images/icon-instagram.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:6,
+        icon:"images/icon-instagram.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:7,
+        icon:"images/icon-youtube.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    },
+    {
+        id:8,
+        icon:"images/icon-youtube.svg",
+        title:'Page Views',
+        suscriber: '87',
+        info_suscriber:'3%'
+    }
+]
 const SectionTwo = () => {
     return (
         <section className="overview-section">
@@ -8,54 +67,10 @@ const SectionTwo = () => {
                 <h1>Overview - Today</h1>
             </div>
             <div className="grid">
-                <article className="card-overview">
-                    <p className="card-o-title">Page Views</p>
-                    <p className="card-o-icon"><img src="images/icon-facebook.svg" alt=""/></p>
-                    <p className="card-o-number">87</p>
-                    <p className="card-o-data card-o-positive-data"><img src="images/icon-up.svg" alt=""/>3%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Likes</p>
-                    <p className="card-o-icon"><img src="images/icon-facebook.svg" alt=""/></p>
-                    <p className="card-o-number">52</p>
-                    <p className="card-o-data card-o-negative-data"><img src="images/icon-down.svg" alt=""/>2%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Likes</p>
-                    <p className="card-o-icon"><img src="images/icon-instagram.svg" alt=""/></p>
-                    <p className="card-o-number">5462</p>
-                    <p className="card-o-data card-o-positive-data"><img src="images/icon-up.svg" alt=""/>2257%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Profile Views</p>
-                    <p className="card-o-icon"><img src="images/icon-instagram.svg" alt=""/></p>
-                    <p className="card-o-number">52k</p>
-                    <p className="card-o-data card-o-positive-data"><img src="images/icon-up.svg" alt=""/>1375%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Retweets</p>
-                    <p className="card-o-icon"><img src="images/icon-twitter.svg" alt=""/></p>
-                    <p className="card-o-number">117</p>
-                    <p className="card-o-data card-o-positive-data"><img src="images/icon-up.svg" alt=""/>303%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Likes</p>
-                    <p className="card-o-icon"><img src="images/icon-twitter.svg" alt=""/></p>
-                    <p className="card-o-number">507</p>
-                    <p className="card-o-data card-o-positive-data"><img src="images/icon-up.svg" alt=""/>553%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Likes</p>
-                    <p className="card-o-icon"><img src="images/icon-youtube.svg" alt=""/></p>
-                    <p className="card-o-number">107</p>
-                    <p className="card-o-data card-o-negative-data"><img src="images/icon-down.svg" alt=""/>19%</p>
-                </article>
-                <article className="card-overview">
-                    <p className="card-o-title">Total Views</p>
-                    <p className="card-o-icon"><img src="images/icon-youtube.svg" alt=""/></p>
-                    <p className="card-o-number">1407</p>
-                    <p className="card-o-data card-o-negative-data"><img src="images/icon-down.svg" alt=""/>12%</p>
-                </article>
+                {
+                    ListDataInfo.map((DataInfo)=><OverviewCard key={DataInfo.id} {...DataInfo}/>)
+                }
+                
             </div>
         </div>
     </section>
