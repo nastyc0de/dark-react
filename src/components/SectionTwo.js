@@ -68,7 +68,8 @@ const SectionTwo = () => {
             </div>
             <div className="grid">
                 {
-                    ListDataInfo.map((DataInfo)=><OverviewCard key={DataInfo.id} {...DataInfo}/>)
+                    ListDataInfo.map((DataInfo)=><OverviewCard 
+                    key={DataInfo.id}{...DataInfo}/>)
                 }
                 
             </div>

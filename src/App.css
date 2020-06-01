@@ -1,7 +1,10 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
+}
+main{
   background: var(--background_color);
+  min-height: 100vh;
 }
 :root{
   --lime-green: hsl(163, 72%, 41%);
@@ -66,7 +69,7 @@ h1{
   display: none;
 }
 .checkbox:checked ~ .switch::before{
-  transform: translateX(0);
+  transform: translateX(30px);
 }
 .switch{
   height: 30px;
@@ -89,7 +92,7 @@ h1{
   height: 20px;
   background: var(--background_color);
   border-radius: 50%;
-  transform: translateX(30px);
+  transform: translateX(0);
   transition: 0.3s;
   will-change: transform;
 }

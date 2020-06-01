@@ -1,7 +1,6 @@
 import React from 'react';
-import Switch from './Switch'
 
-const Header = () => {
+const Header = ({children}) => {
 
     return (
         <header className="header">
@@ -11,7 +10,7 @@ const Header = () => {
                     <h1>Social Media Dashboard</h1>
                     <p className="header-total">Total follower: 23.004</p>
                 </div>
-                <Switch/>
+                {children}
             </div>
         </div>
         </header>
